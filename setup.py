@@ -19,7 +19,7 @@ try:
         url="https://github.com/bioinfocao/pysapc",
         license="BSD 3 clause",
         packages=["pysapc","pysapc.tests"],
-        #packages = find_packages(), 
+        #packages = find_packages(),
         package_data = {
                 # If any package contains *.txt or *.rst files, include them:
                 '': ['*.txt', '*.rst'],
@@ -44,7 +44,7 @@ except:
         url="https://github.com/bioinfocao/pysapc",
         license="BSD 3 clause",
         packages=["pysapc","pysapc.tests"],
-        #packages = find_packages(), 
+        #packages = find_packages(),
         package_data = {
                 # If any package contains *.txt or *.rst files, include them:
                 '': ['*.txt', '*.rst'],
