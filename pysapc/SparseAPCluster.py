@@ -111,7 +111,7 @@ def getPreferenceList(preference,nSamplesOri,data_array):
 
 
 def sparseAffinityPropagation(row_array,col_array,data_array,\
-        preference='min',convergence_iter=15,convergence_percentage=0.999999,max_iter=200,damping=0.9,verboseIter=100, parallel=True):
+        preference='min',convergence_iter=15,convergence_percentage=0.999999,max_iter=200,damping=0.9,verboseIter=None,parallel=True):
     """
     Sparse Affinity Propagation (SAP) clustering function
     This function can be called directly if row_array,col_array,data_array available.
@@ -247,7 +247,7 @@ def sparseAffinityPropagation(row_array,col_array,data_array,\
         for ind in sorted(singleSampleInds): # sorted singleSampleInds, insert samples that removed in rmSingleSamples()
             finalLabels.insert(ind,ind)
         finalLabels=np.asarray(finalLabels)
-    return finalLabels
+    return np.unique(finalLabels), finalLabels, it
 
 
 class SAP():
